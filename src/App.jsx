@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Body from './components/Mybody';
 import AddProduct from './components/AddProducts';
 import CardDetails from './components/CardDetails';
-import EditProducts from './components/EditProducts';
+import EditProduct  from './components/EditProducts';
 import Cart from './components/Cart';
 
 function App() {
