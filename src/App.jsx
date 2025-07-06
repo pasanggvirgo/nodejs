@@ -38,7 +38,7 @@ function App() {
     const endpoint = isLogin ? 'login' : 'signup';
 
     try {
-       const res = await fetch(`${window.BASE_URI}/${endpoint}`, {
+       const res = await fetch(`https://nodejs-kol4.onrender.com/${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, userMode }),
