@@ -15,7 +15,7 @@ const EditProduct = () => {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${id}`)
+    fetch(`${process.env.BASE_URI}/products/${id}`)
       .then(res => res.json())
       .then(data => {
         setProduct(data);
@@ -42,7 +42,7 @@ const EditProduct = () => {
       images
     };
 
-    fetch(`http://localhost:5000/products/${id}`, {
+    fetch(`${process.env.BASE_URI}/products/${id}`, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(updatedProduct),

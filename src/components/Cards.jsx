@@ -8,7 +8,7 @@ const Cards = ({ searchTerm = '', priceRange = [0, Infinity], category = '', rol
   
 
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('${process.env.BASE_URI}/products')
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error('Error fetching products:', err));
@@ -16,7 +16,7 @@ const Cards = ({ searchTerm = '', priceRange = [0, Infinity], category = '', rol
 
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
-      fetch(`http://localhost:5000/products/${id}`, {
+      fetch(`${process.env.BASE_URI}/products/${id}`, {
         method: 'DELETE',
       })
         .then((res) => {

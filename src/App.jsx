@@ -38,7 +38,7 @@ function App() {
     const endpoint = isLogin ? 'login' : 'signup';
 
     try {
-      const res = await fetch(`http://localhost:5000/${endpoint}`, {
+      const res = await fetch(`${process.env.BASE_URI}/${endpoint}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password, userMode }),

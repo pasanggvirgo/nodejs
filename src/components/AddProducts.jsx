@@ -38,7 +38,7 @@ const AddProduct = ({ username, role }) => {
     images.forEach((img) => formData.append('images', img));
 
     try {
-      const res = await fetch('http://localhost:5000/add-product', {
+      const res = await fetch('${process.env.BASE_URI}/add-product', {
         method: 'POST',
         body: formData,
       });

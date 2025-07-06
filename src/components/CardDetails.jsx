@@ -12,7 +12,7 @@ const CardDetails = ({cart,setCart}) => {
 
 
   useEffect(() => {
-    fetch('http://localhost:5000/products')
+    fetch('${process.env.BASE_URI}/products')
       .then(res => res.json())
       .then(data => {
         const found = data.find(p => p._id === id);
