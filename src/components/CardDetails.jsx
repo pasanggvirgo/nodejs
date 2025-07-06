@@ -12,7 +12,7 @@ const CardDetails = ({cart,setCart}) => {
 
 
   useEffect(() => {
-    fetch('${process.env.BASE_URI}/products')
+    fetch('https://nodejs-kol4.onrender.com/products')
       .then(res => res.json())
       .then(data => {
         const found = data.find(p => p._id === id);

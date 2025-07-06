@@ -8,7 +8,7 @@ const Cards = ({ searchTerm = '', priceRange = [0, Infinity], category = '', rol
   
 
   useEffect(() => {
-    fetch('${process.env.BASE_URI}/products')
+    fetch('https://nodejs-kol4.onrender.com/products')
       .then((res) => res.json())
       .then((data) => setItems(data))
       .catch((err) => console.error('Error fetching products:', err));
@@ -16,7 +16,7 @@ const Cards = ({ searchTerm = '', priceRange = [0, Infinity], category = '', rol
 
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this product?')) {
-      fetch(`${process.env.BASE_URI}/products/${id}`, {
+      fetch(`https://nodejs-kol4.onrender.com/products/${id}`, {
         method: 'DELETE',
       })
         .then((res) => {

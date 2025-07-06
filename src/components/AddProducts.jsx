@@ -38,7 +38,7 @@ const AddProduct = ({ username, role }) => {
     images.forEach((img) => formData.append('images', img));
 
     try {
-      const res = await fetch('${process.env.BASE_URI}/add-product', {
+      const res = await fetch('https://nodejs-kol4.onrender.com/add-product', {
         method: 'POST',
         body: formData,
       });
