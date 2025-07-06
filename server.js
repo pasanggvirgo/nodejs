@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads')); // Serve static files
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/userauth', {
+mongoose.connect('mongodb+srv://sherpapasang877:4KblJTAnZDFHpEGl@cluster0.qwnvwgu.mongodb.net/ecomercedb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
