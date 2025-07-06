@@ -91,7 +91,7 @@ p {
   border-radius: 4px;
 }
 .Logout-button{
-  background-Color: '#555';
+  background-color: '#555';
   color: 'white';
   border: 'none';
   padding: '6px 12px';
@@ -100,7 +100,7 @@ p {
 
 }
 .Logout-button:hover{
-  background-Color: rgb(49, 49, 49);
+  background-color: rgb(49, 49, 49);
 }
 
 
