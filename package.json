@@ -10,7 +10,8 @@
     "server": "nodemon server.js",
     "client": "vite",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-     "frontend": "vite"
+     "frontend": "vite",
+     "build:frontend": "vite build"
   },
   "dependencies": {
     "@babel/runtime": "^7.27.6",
