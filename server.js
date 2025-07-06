@@ -6,20 +6,20 @@ import bcrypt from 'bcrypt';
 import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
+import dotenv from 'dotenv';
 
 const app = express();
 const PORT = 5000;
-
+dotenv.config()
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads')); // Serve static files
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://sherpapasang877:4KblJTAnZDFHpEGl@cluster0.qwnvwgu.mongodb.net/ecomercedb', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+console.log(process.env.MONGO_URI);
+mongoose.connect(process.env.MONGO_URI,
+);
 
 // Multer setup for image uploads
 const storage = multer.diskStorage({
