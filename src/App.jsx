@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Body from './components/Body';
+import Body from './components/body';
 import AddProduct from './components/AddProducts';
 import CardDetails from './components/CardDetails';
 import EditProducts from './components/EditProducts';

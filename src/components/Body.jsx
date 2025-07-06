@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ReactSlider from 'react-slider';
-import Cards from './cards';
+import Cards from './Cards';
 
 const Body = ({ role }) => {
   const [searchTerm, setSearchTerm] = useState('');

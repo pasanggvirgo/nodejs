@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import Cards from './cards';
+import Cards from './Cards';
 
 const CardDetails = ({cart,setCart}) => {
   const { id } = useParams();
